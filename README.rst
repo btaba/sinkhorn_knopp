@@ -1,11 +1,21 @@
-Sinkhorn_Knopp
+sinkhorn_knopp
 --------
 
 To convert non-negative square matrices with total support into doubly stochastic matrices. 
 
-    >>> from sinkhorn_knopp import SinkhornKnopp
-    >>> sk = SinkhornKnopp()
-    >>> P = np.array([[.011, .15], [1.71, .1]])
-    >>> sk.fit(P)
+.. code-block:: python
+    :caption: example
+    >>> import numpy as np
+    >>> from sinkhorn_knopp import sinkhorn_knopp as skp
+    >>> sk = skp.SinkhornKnopp()
+    >>> P = [[.011, .15], [1.71, .1]]
+    >>> P_ds = sk.fit(P)
+    >>> P_ds
+    array([[ 0.06102561,  0.93897439],
+       [ 0.93809928,  0.06190072]])
+    >>> np.sum(P_ds, axis=0)
+    array([ 0.99912489,  1.00087511])
+    >>> np.sum(P_ds, axis=1)
+    array([ 1.,  1.])
 
 See http://msp.org/pjm/1967/21-2/pjm-v21-n2-p14-s.pdf for reference.

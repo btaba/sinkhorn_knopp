@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
-try:
-    from setuptools import setup
-except ImportError:
-    from distutils.core import setup
+# try:
+from setuptools import setup, find_packages
+# except ImportError:
+    # from distutils.core import setup
 
 
 def readme():
@@ -19,17 +19,17 @@ config = {
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Science/Research',
         'License :: OSI Approved :: MIT License',
-        'Programming Language :: Python :: 2.7',
         'Topic :: Scientific/Engineering :: Information Analysis',
+        'Programming Language :: Python :: 2.7',
     ],
     'license': 'MIT',
-    'url': '',
+    'url': 'https://github.com/btaba/sinkhorn_knopp',
     'author': 'Baruch Tabanpour',
     'author_email': 'baruch@tabanpour.info',
     'license': 'MIT',
-    'packages': [],
+    'packages': find_packages(exclude=["*.tests", "*.tests.*", "tests.*", "tests"]),
     'install_requires': [
-        'numpy'
+        'numpy>=1'
     ],
     'zip_safe': False,
     'test_suite': 'nose.collector',
