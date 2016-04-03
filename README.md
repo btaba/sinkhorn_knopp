@@ -19,3 +19,35 @@ To convert non-negative square matrices with total support into doubly stochasti
 ```
 
 See http://msp.org/pjm/1967/21-2/pjm-v21-n2-p14-s.pdf for reference.
+
+## Install
+
+Either:
+
+```sh
+pip install sinkhorn_knopp
+```
+
+or
+
+```sh
+git clone https://github.com/btaba/sinkhorn_knopp
+cd sinkhorn_knopp
+python setup.py install
+```
+
+## Uninstall
+
+Depending on the above, either:
+
+```sh
+pip uninstall sinkhorn_knopp
+```
+
+or 
+
+```sh
+cd sinkhorn_knopp
+python setup.py install --record files.txt
+cat files.txt | xargs rm -rf
+```
