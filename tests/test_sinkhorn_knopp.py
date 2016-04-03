@@ -39,6 +39,14 @@ class TestSinkhornKnopp(unittest.TestCase):
         self.assertEqual(sk._iterations, 5)
 
     def test_support_warning(self):
+        """
+            A non-negative square is said to have total
+            support if A =/= 0 and if every positive element of A
+            lies on a positive diagonal. A diagonal of a matrix
+            is defined, for any permutation of sigma = {1,...,N},
+            as a[1,sigma(1)], ..., a[N,sigma(N)], where a[i, j]
+            is an element of A at the ith row and jth column.
+        """
         with warnings.catch_warnings(record=True) as w:
             warnings.simplefilter("always")
             sk = SinkhornKnopp()
