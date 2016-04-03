@@ -51,6 +51,23 @@ class SinkhornKnopp:
         Diagonal matrix obtained after a stopping condition was met
         so that _D1.dot(P).dot(_D2) is close to doubly stochastic.
 
+    Example
+    -------
+
+    .. code-block:: python
+        >>> import numpy as np
+        >>> from sinkhorn_knopp import sinkhorn_knopp as skp
+        >>> sk = skp.SinkhornKnopp()
+        >>> P = [[.011, .15], [1.71, .1]]
+        >>> P_ds = sk.fit(P)
+        >>> P_ds
+        array([[ 0.06102561,  0.93897439],
+           [ 0.93809928,  0.06190072]])
+        >>> np.sum(P_ds, axis=0)
+        array([ 0.99912489,  1.00087511])
+        >>> np.sum(P_ds, axis=1)
+        array([ 1.,  1.])
+
     """
 
     def __init__(self, max_iter=1000, epsilon=1e-3):
