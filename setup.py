@@ -12,7 +12,7 @@ def readme():
 
 config = {
     'name': 'sinkhorn_knopp',
-    'version': '0.1',
+    'version': '0.2',
     'description': 'Sinkhorn-Knopp Algorithm',
     'long_description': readme(),
     'classifiers': [
@@ -21,6 +21,8 @@ config = {
         'License :: OSI Approved :: MIT License',
         'Topic :: Scientific/Engineering :: Information Analysis',
         'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
     ],
     'license': 'MIT',
     'url': 'https://github.com/btaba/sinkhorn_knopp',
