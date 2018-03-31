@@ -1,6 +1,9 @@
 sinkhorn_knopp
 --------
 
+[![Build Status](https://travis-ci.org/btaba/sinkhorn_knopp.svg?branch=master)](https://travis-ci.org/btaba/sinkhorn_knopp)
+
+
 To convert non-negative square matrices with total support into doubly stochastic matrices. 
 
 ```python
